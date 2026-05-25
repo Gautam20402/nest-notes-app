@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: nest-notes-app
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: node dist/main.js
+    envVars:
+      - key: DB_HOST
+        fromDatabase:
+          name: nest-notes-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: nest-notes-db
+          property: port
+      - key: DB_USERNAME
+        fromDatabase:
+          name: nest-notes-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: nest-notes-db
+          property: password
+      - key: DB_NAME
+        fromDatabase:
+          name: nest-notes-db
+          property: database
+      - key: JWT_SECRET
+        value: thisisatestsecrectkey
+      - key: JWT_EXPIRES_IN
+        value: 30m
+      - key: NODE_ENV
+        value: production
+
+databases:
+  - name: nest-notes-db
+    databaseName: postgres
+    user: postgres
