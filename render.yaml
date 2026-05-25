@@ -35,4 +35,4 @@ services:
 databases:
   - name: nest-notes-db
     databaseName: postgres
-    user: postgres
+    user: nest
