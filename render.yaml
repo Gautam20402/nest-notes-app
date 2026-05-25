@@ -34,5 +34,5 @@ services:
 
 databases:
   - name: nest-notes-db
-    databaseName: notesdb
+    databaseName: notesdb_9ua6
     user: notesuser
