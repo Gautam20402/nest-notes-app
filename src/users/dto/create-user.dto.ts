@@ -1,15 +1,16 @@
-import { IsNotEmpty, IsString } from 'class-validator';
+import { IsNotEmpty, IsString, Matches } from 'class-validator';
 
 export class CreateUserDto {
   @IsString()
   @IsNotEmpty()
-  name: string;
+  name!: string;
 
   @IsString()
   @IsNotEmpty()
-  username: string;
+  @Matches(/^\S+$/, { message: 'Username must not contain spaces' })
+  username!: string;
 
   @IsString()
   @IsNotEmpty()
-  password: string;
+  password!: string;
 }
