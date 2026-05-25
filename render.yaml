@@ -2,7 +2,7 @@ services:
   - type: web
     name: nest-notes-app
     runtime: node
-    buildCommand: npm install && npm install -g @nestjs/cli && nest build
+    buildCommand: npm install && npx @nestjs/cli build
     startCommand: node dist/main.js
     envVars:
       - key: DB_HOST
