@@ -2,6 +2,7 @@ services:
   - type: web
     name: nest-notes-app
     runtime: node
+    rootDir: Backend
     buildCommand: npm install && npx @nestjs/cli build
     startCommand: node dist/main.js
     envVars:
