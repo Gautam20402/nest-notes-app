@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f1ea;
+  font-family: Arial, sans-serif;
+  color: #4a4035;
+}
+
+.page {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  color: #5b4c3f;
+}
+
+.card {
+  background: #fffaf3;
+  border: 1px solid #ddd1c1;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cdbca7;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: #fff;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+button {
+  background: #8a7358;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.logout-btn {
+  background: #a25c4d;
+}
+
+.delete-btn {
+  background: #b55b4c;
+}
+
+.notes-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.note-card {
+  background: #fffaf3;
+  border: 1px solid #ddd1c1;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.note-text {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.note-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.note-header input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  margin: 2px 0 0 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.note-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  flex: 1;
+  word-break: break-word;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.search-result {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #efe8dd;
+}
+
+.container {
+  width: 420px;
+  margin: 80px auto;
+  background: #fffaf3;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #ddd1c1;
+}
+
+.container h2 {
+  text-align: center;
+}
+
+.container button {
+  width: 100%;
+}
+
+.container a {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  color: #8a7358;
+  text-decoration: none;
+}
+
+.error {
+  color: #b55b4c;
+  text-align: center;
+}
+
+.pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.pagination button {
+  min-width: 100px;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
